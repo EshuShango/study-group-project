@@ -1,3 +1,3 @@
- --WE HAVE TO FILL IN NECESSARY CODE etc
- DROP DATABASE IF EXISTS studygroup_db
- CREATE DATABASE studygroup_db
+DROP DATABASE IF EXISTS studygroup_db;
+CREATE DATABASE studygroup_db;
+

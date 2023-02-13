@@ -36,3 +36,6 @@ GroupUser.init(
     modelName: 'group_user',
   }
 );
+
+
+module.exports = GroupUser;
