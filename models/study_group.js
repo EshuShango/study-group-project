@@ -46,6 +46,13 @@ group.init(
       }
     }
 
+  },
+  {
+    sequelize,
+    timestmaps:true,
+    freezeTableName:true,
+    uderscored:true,
+    modelName:'study_group'
   }
 )
 
