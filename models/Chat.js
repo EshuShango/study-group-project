@@ -3,7 +3,7 @@ const sequelize = require("../config/connection");
 
 class Chat extends Model {}
 
-// create fields/columns for Location model
+// create fields/columns for Chat model
 Chat.init (
   { 
     id: {
