@@ -4,6 +4,7 @@ const sequelize = require("../config/connection");
 class Group extends Model {}
 
 Group.init(
+
   {
     id:{
       type: DataTypes.INTEGER,
@@ -57,3 +58,4 @@ Group.init(
 );
 
 module.exports = Group;
+
