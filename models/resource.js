@@ -1,6 +1,5 @@
 const {Model, DataTypes} = require("sequelize");
 const sequelize = require("../config/connection");
-const User = require('./user');
 
 class Resource extends Model {}
 
@@ -24,7 +23,7 @@ Resource.init(
     user_id:{
       type: DataTypes.INTEGER,
       references: {
-        model: "User",
+        model: "user",
         key: "id",
         },
     },

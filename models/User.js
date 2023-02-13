@@ -28,7 +28,11 @@ User.init(
     username: {
       type:sequelize.STRING,
       allowNull: false,
-      unique: true
+      unique: true,
+      validate: {
+        //validating email
+        isEmail: true,
+      }
     },
     password: {
       type:sequelize.STRING,
