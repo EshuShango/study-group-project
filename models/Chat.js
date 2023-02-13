@@ -3,7 +3,7 @@ const sequelize = require("../config/connection");
 
 class Chat extends Model {}
 
-// create fields/columns for Location model
+// create fields/columns for Chat model
 Chat.init (
   { 
     id: {
@@ -28,6 +28,11 @@ Chat.init (
       type: DataTypes.INTEGER,
       allowNull: false,
       
+    },
+    created_at: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
     }
   },
   {
