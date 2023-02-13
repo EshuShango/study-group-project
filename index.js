@@ -1,46 +1,35 @@
- //! WE HAVE TO FILL IN NECESSARY CODE etc 
+const express = require('express');
+const session = require('express-session');
+const exphbs = require('express-handlebars');
+const routes = require('./controllers');
+const sequelize = require('./config/connection');
 
- // TODO(SUGGESTIONS):  IF A FUNCTION IS MORE THAN 10 LINES --- -EXAMPLE BELOW (
+const app = express();
+const PORT = process.env.PORT || 3001;
 
-//   import mysql from "mysql2/promise";
+const sess = {
+    secret: 'Super secret secret',
+    cookie: {
+        sameSite: 'strict'
+    },
+    resave: false,
+    saveUninitialized: true,
+};
 
-// //^ ---How im connecting to the MySQL database via---
-// const dbConnect = mysql.createPool(
-//   {
-//     host: 'localhost',
-//     user: 'root',
-//     password: 'S1Q23LYm',
-//     database: 'employee_tracker_db',
-//     waitForConnections: true,
-//     connectionLimit: 10,
-//     queueLimit: 0,
-//   },
-//   // console.log(`Connected to the courses_db database.`)
-// );
+app.use(session(sess));
+app.use(express.static('public'));
 
-// export { dbConnect };
+const hbs = exphbs.create({});
 
-// TODO(SUGGESTIONS):  IF A FUNCTION IS MORE THAN 10 LINES ---
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
 
-// ---------------------------------
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-//^ WE CAN MAKE A SEPARATE FILE AND JUST (IMPORT) const inquirer = require("inquirer"); TO THE INDEX FILE AS SUCH BELOW
 
-//& ----
+app.use(routes);
 
-// import inquirer from "inquirer";
-//  import { dbConnect } from "./public/config/connect.js";
-
-// const exampleCode = async () => {
-//   const ex = console.log('example code etc')
-
-// };
-
-// const init = async () => {
-//   await exampleCode();
-//   await { dbConnect }();
-// };
-
-//  init();
-
-//& -----
+sequelize.sync({ force: false }).then(() => {
+    app.listen(PORT, () => console.log('Now listening on http://localhost:' + PORT));
+});
