@@ -23,7 +23,7 @@ Chat.init (
       }
     },
     message:{
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
       
     }, 

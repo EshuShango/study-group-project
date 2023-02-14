@@ -1,6 +1,6 @@
 const Chat = require("./Chat");
 const GroupUser = require("./GroupUser");
-const Resources = require("./Resources");
+const Resource = require("./Resources");
 const Group = require("./Group");
 const User = require("./User");
 
@@ -25,12 +25,12 @@ Group.belongsToMany(User, {
 });
 
 
-User.hasMany(Resources, {
+User.hasMany(Resource, {
   foreginKey:"user_id",
   onDelete:"CASCADE",
 });
 
-Resources.belongsTo(User, {
+Resource.belongsTo(User, {
   foreignKey: "user_id",
 });
 
@@ -43,12 +43,12 @@ Chat.belongsTo(Group, {
   foreignKey:"chat_id",
 });
 
-Group.hasMany(Resources, {
+Group.hasMany(Resource, {
   foreignKey:"resource_id",
   onDelete:"CASCADE",
 });
 
-Resources.belongsTo(Group, {
+Resource.belongsTo(Group, {
   foreignKey:"resource_id",
 });
   
@@ -59,5 +59,5 @@ module.exports = {
   Chat,
   Group,
   GroupUser,
-  Resources,
+  Resource,
 };

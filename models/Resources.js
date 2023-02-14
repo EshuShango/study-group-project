@@ -12,13 +12,13 @@ Resource.init(
       autoIncrement:true,
     },
     url:{
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       validate: {
         isUrl: true,
       }
     },
     description:{
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
     },
     user_id:{
       type: DataTypes.INTEGER,
