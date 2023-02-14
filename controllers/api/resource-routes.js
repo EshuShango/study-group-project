@@ -4,7 +4,10 @@ const { Resource } = require("../../models");
 router.get('/', async (req, res) => {
   try {
     const resourceData = await Resource.findAll();
-    res.status(200).json(resourceData);
+
+    const bruh = resourceData.map((data) => data.get({plain:true}));
+
+    res.status(200).json(bruh);
   }
   catch (err) {
     res.status(500).json(err);
