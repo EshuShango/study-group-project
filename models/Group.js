@@ -28,17 +28,6 @@ Group.init(
         isUnique:true,
       }
     },
-    // chat_id:{
-    //   type:DataTypes.INTEGER,
-    //   allowNull:false,
-    //   references:{
-    //     model:'chat',
-    //     key:'id'
-    //   },
-    //   validate:{
-    //     len:[1],
-    //   }
-    // },
     date_time:{
       type:DataTypes.DATE,
       allowNull:false,
