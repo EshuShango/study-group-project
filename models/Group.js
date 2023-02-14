@@ -17,7 +17,7 @@ Group.init(
       allowNull:false,
       validate: {
         len:[4],
-        isUnique:true,
+        // isUnique:true,
       }
     },
     subject:{
@@ -25,7 +25,7 @@ Group.init(
       allowNull:false,
       validate:{
         len:[4],
-        isUnique:true,
+        // isUnique:true,
       }
     },
     date_time:{
