@@ -26,7 +26,7 @@ User.init(
       allowNull: false,
     },
     username: {
-      type:sequelize.STRING,
+      type: DataTypes.STRING,
       allowNull: false,
       unique: true,
       validate: {
@@ -35,7 +35,7 @@ User.init(
       }
     },
     password: {
-      type:sequelize.STRING,
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         //validate password length here, and any other requirements we 

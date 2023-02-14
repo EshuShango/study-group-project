@@ -13,7 +13,7 @@ Group.init(
       autoIncrement:true,
     },
     name:{
-      type:DataTypes.VARCHAR[30],
+      type:DataTypes.STRING,
       allowNull:false,
       validate: {
         len:[4],
@@ -21,7 +21,7 @@ Group.init(
       }
     },
     subject:{
-      type:DataTypes.VARCHAR[30],
+      type:DataTypes.STRING,
       allowNull:false,
       validate:{
         len:[4],
@@ -36,12 +36,16 @@ Group.init(
       }
     },
     date_time:{
-      type:DataTypes.date_time,
+      type:DataTypes.DATE,
       allowNull:false,
     },
     resource_id:{
       type:DataTypes.INTEGER,
       allowNull:false,
+      references:{
+        model:'resource',
+        key:'id'
+      },
       validate:{
         len:[1]
       }
