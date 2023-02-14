@@ -17,7 +17,10 @@ Chat.init (
       type: DataTypes.INTEGER,
       allowNull: false,
       underscored: true,
-      
+      references: {
+        model: 'user',
+        key: 'id'
+      }
     },
     message:{
       type: DataTypes.STRING,
@@ -27,7 +30,10 @@ Chat.init (
     study_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      
+      references: {
+        model:'group',
+        key: 'id'
+      }
     },
     created_at: {
       type: DataTypes.DATE,

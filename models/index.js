@@ -1,53 +1,56 @@
 const Chat = require("./Chat");
 const GroupUser = require("./GroupUser");
-const Resources = require("./Resource");
+const Resources = require("./Resources");
 const StudyGroup = require("./StudyGroup");
 const User = require("./User");
 
-Chat.hasMany(User, {
-  foreignKey: "User.id",
+User.hasMany(Chat,{
+  foreignKey:"user_id",
   onDelete:"CASCADE",
 });
 
-GroupUser.hasMany(User, {
-  foreignKey:"User.id",
-  onDelete:"CASCADE"
+Chat.belongsTo(User, {
+  foreignKey: "user_id",
 });
 
 
+User.belongsToMany(StudyGroup, {
+  through: { model: GroupUser },
+  as: "group_users"
+});
 
-StudyGroup.hasMany(User, {
-  foreignKey:"User.id",
+
+StudyGroup.belongsToMany(User, {
+  through: { model: GroupUser },
+  as: "users_groups"
+});
+
+
+User.hasMany(Resources, {
+  foreginKey:"user_id",
   onDelete:"CASCADE",
-  through:{model: GroupUser},
-  as:"users_studygroup"
+});
+
+Resources.belongsTo(User, {
+  foreignKey: "user_id",
 });
 
 StudyGroup.hasOne(Chat, {
-  foreignKey:"Chat.id",
+  foreignKey:"chat_id",
   onDelete:"CASCADE",
+});
+
+Chat.belongsTo(StudyGroup, {
+  foreignKey:"chat_id",
 });
 
 StudyGroup.hasMany(Resources, {
-  foreignKey:"Resource.id",
-  onDelete:"CASCADE",
-})
-
-
-User.hasMany(Chat,{
-  foreignKey:"Chat.id",
+  foreignKey:"resource_id",
   onDelete:"CASCADE",
 });
 
-User.hasMany(StudyGroup, {
-  foreignKey:"GroupUser.id",
-  onDelete:"CASCADE",
+Resources.belongsTo(StudyGroup, {
+  foreignKey:"resource_id",
 });
-
-User.hasMany(Resources, {
-  foreginKey:"Resource.id",
-  onDelete:"CASCADE",
-
-});
-
+  
 //bruh
