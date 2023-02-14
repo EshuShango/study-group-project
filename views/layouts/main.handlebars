@@ -29,7 +29,9 @@
       crossorigin="anonymous"
     ></script>
     <!-- (MDB) Bootstrap CSS -->
-    <link rel="stylesheet" href="/group-projects/group-project-2/public/css/style.css" />
+
+    <link rel="stylesheet" href="/css/style.css" />
+
     <!-- Font Awesome -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -49,19 +51,18 @@
 
   <body>
   <div class="">
-    <header class="">
-      <h1>
-        {{!-- <span role="img" aria-label="money">💸</span> --}}
-        <a href="/">SOMETHING HERE </a>
-      </h1>
-      <nav>
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button .shadow-drop-center " id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
+    <header>
+      <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand">Study Budd</a>
+          {{#if logged_in}}
+          <button id='logoutBtn' type="button" class="btn btn-outline-dark btn-rounded" data-mdb-ripple-color="dark">Logout</button>
+          {{else}}
+          <a href="/login">
+            <button id='loginBtn' type="button" class="btn btn-outline-dark btn-rounded" data-mdb-ripple-color="dark">Login</button>
+          </a>
+          {{/if}}
+        </div>
       </nav>
     </header>
     <main class="">
@@ -75,11 +76,13 @@
 
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
-
-  {{!-- ! WE HAVE TO FILL IN NECESSARY CODE etc --}}
-
-  <script src=""></script>
+  <script src="/js/logout.js"></script>
   {{/if}}
+  <!-- MDB -->
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"
+  ></script>
 </body>
 
 </html>
