@@ -1,12 +1,11 @@
 const Chat = require("./Chat");
 const GroupUser = require("./GroupUser");
 const Resources = require("./Resources");
-const StudyGroup = require("./StudyGroup");
+const Group = require("./Group");
 const User = require("./User");
 
 User.hasMany(Chat,{
   foreignKey:"user_id",
-  onDelete:"CASCADE",
 });
 
 Chat.belongsTo(User, {
@@ -14,13 +13,13 @@ Chat.belongsTo(User, {
 });
 
 
-User.belongsToMany(StudyGroup, {
+User.belongsToMany(Group, {
   through: { model: GroupUser },
   as: "group_users"
 });
 
 
-StudyGroup.belongsToMany(User, {
+Group.belongsToMany(User, {
   through: { model: GroupUser },
   as: "users_groups"
 });
@@ -35,22 +34,30 @@ Resources.belongsTo(User, {
   foreignKey: "user_id",
 });
 
-StudyGroup.hasOne(Chat, {
+Group.hasOne(Chat, {
   foreignKey:"chat_id",
   onDelete:"CASCADE",
 });
 
-Chat.belongsTo(StudyGroup, {
+Chat.belongsTo(Group, {
   foreignKey:"chat_id",
 });
 
-StudyGroup.hasMany(Resources, {
+Group.hasMany(Resources, {
   foreignKey:"resource_id",
   onDelete:"CASCADE",
 });
 
-Resources.belongsTo(StudyGroup, {
+Resources.belongsTo(Group, {
   foreignKey:"resource_id",
 });
   
 //bruh
+
+module.exports = {
+  User,
+  Chat,
+  Group,
+  GroupUser,
+  Resources,
+};
