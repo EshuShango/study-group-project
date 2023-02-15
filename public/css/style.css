@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
 
-
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  font-family: "Nova Square", cursive;
+  font-family: 'Nova Square', cursive;
 }
 
 /* ----------------------------------------------
@@ -13,11 +14,22 @@
   Twitter: @xsgames_
 ---------------------------------------------- */
 
-.shadow-drop-center{animation:shadow-drop-center 0.4s linear both} 
-  @keyframes  
-    shadow-drop-center{0%{box-shadow:0 0 0 0 transparent}100%{box-shadow:0 0 20px 0 rgba(255,255,255,.55)}}
+.shadow-drop-center {
+  animation: shadow-drop-center 0.4s linear both;
+}
+@keyframes shadow-drop-center {
+  0% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+  100% {
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.55);
+  }
+}
 
 /*
+
+
+
 --------BTN Func BELOW--------
 */
 
@@ -37,4 +49,22 @@
 }
 /*
 --------BTN Func ABOVE--------
+*/
+
+
+/*
+--------DATE PICKER Func BELOW--------
+*/
+label {
+  margin-left: 20px;
+}
+#datepicker {
+  width: 180px;
+  margin: 0 20px 20px 20px;
+}
+#datepicker > span:hover {
+  cursor: pointer;
+}
+/*
+--------DATE PICKER Func ABOVE--------
 */

@@ -13,4 +13,10 @@ router.get('/login', async (req, res) => {
 });
 
 
+//? router below is not need ???
+// router.get('/chatroom', async (req, res) => {
+//     res.render('chatroom')
+// })
+
+
 module.exports = router;
