@@ -53,38 +53,18 @@
               <h5 class="card-title">Resources</h5>
             </div>
             <div id="addBtnFlex">
-              <button type="button" class="btn btn-outline-dark btn-rounded" id="addResource" data-mdb-toggle="modal" data-mdb-target="#staticBackdrop">Add a Resource</button>
+              <button type="button" class="btn btn-outline-dark btn-rounded" id="addResourceLaunch"
+                data-mdb-toggle="modal" data-mdb-target="#staticBackdrop">Add a Resource</button>
             </div>
           </div>
-          <!-- Button trigger modal -->
-
-
-<!-- Modal -->
-<div
-  class="modal fade"
-  id="staticBackdrop"
-  data-mdb-backdrop="static"
-  data-mdb-keyboard="false"
-  tabindex="-1"
-  aria-labelledby="staticBackdropLabel"
-  aria-hidden="true"
->
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">...</div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Understood</button>
-      </div>
-    </div>
-  </div>
-</div>
           {{!-- we will need to dynamically serve in the resources here, making a new <p> tage for each --}}
             {{!-- would be nice to somehow make a line between each resource being served --}}
+
+          <div>
+            {{#each bruh }}
+            <p>{{this.description}}</p>
+            {{/each}}
+          </div>
           <p class="card-text"><span class="bold">Description:</span> This will be where the description loads</p>
           <p class="card-text"><span class="bold">url:</span> https://randomurl.com</p>
           <p class="card-text last"><span class="bold">Author:</span> Test User 2</p>
@@ -104,12 +84,48 @@
 
   </main>
 
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-mdb-backdrop="static" data-mdb-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Add a Resource</h5>
+          <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="modalTag">Description</p>
+          <div class="form-outline">
+            <input type="text" id="form12" class="form-control" />
+            <label class="form-label" for="form12">Enter description here</label>
+          </div>
+          <p class="modalTag">url</p>
+          <div class="form-outline">
+            <input type="text" id="form12" class="form-control" />
+            <label class="form-label" for="form12">Enter url here</label>
+          </div>
+          <p class="modalTag">Author</p>
+          <div class="form-outline">
+            <input type="text" id="form12" class="form-control" />
+            <label class="form-label" for="form12">Enter name here</label>
+          </div>
+        </div>
 
-  <div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="addResource">Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+  {{!-- <div>
     {{#each bruh }}
     <p>{{this.description}}</p>
     {{/each}}
-  </div>
+  </div> --}}
 
 
 

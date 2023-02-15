@@ -84,7 +84,7 @@ includes styling for cards, bold text
   padding-bottom: 10px;
 }
 
-#addResource {
+#addResourceLaunch {
   font-size: 10px;
   padding: 5px 10px 5px 10px;
   align-self: center;
@@ -106,4 +106,8 @@ includes styling for cards, bold text
 
 #addBtnFlex {
   align-items: right;
+}
+
+.modalTag{
+  padding-top: 15px;
 }
