@@ -1,1 +1,293 @@
-{{!-- ! WE HAVE TO FILL IN NECESSARY CODE etc --}}
+{{! IF HAVE TIME ADD ALL STYLES TO THE CSS }}
+{{!-- <html>
+  {{!-- <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  </head> --}}
+  <head>
+    <title>Study Budd</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!--day.JS -->
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <!--MDB (BS on steriods !)-->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"
+    ></script>
+      <!-- ajax -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <!-- (MDB) Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/style.css" />
+   
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/8c87e93458.js" crossorigin="anonymous"></script>
+    
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.css"
+      rel="stylesheet"
+    />
+  </head> --}}
+
+<main class='row'>
+
+  <div class='col-sm-8'>
+    <section class='intro' style=' height:100%'>
+
+      <div class='container align-items-center'>
+
+        <div class='container' style='background-color: red ;'>
+
+          <div class='row justify-content-center'>
+            <div class='col-8 mt-5'>
+              <div class='card shadow-2-strong' style='border-radius: .5rem;'>
+
+                <div class='card-body p-0'>
+
+                  <div
+                    class='table-responsive table-scroll table table-hover'
+                    data-mdb-perfect-scrollbar='true'
+                    style='position: relative; height: 500px; border-radius: .5rem;'
+                  >
+                    <table
+                      class='table table-dark mb-0 table table-hover'
+                      style='text-overflow: ellipsis;
+                  white-space: nowrap;
+                  overflow: hidden;'
+                    >
+
+                      <thead
+                        style='background-color: #393939; text-overflow: 
+                    ellipsis; top: 0;
+                    position: sticky;'
+                      >
+
+                        <tr class='text-uppercase text-success'>
+                          <th scope='col'>Study Group</th>
+                          <th scope='col'>Topic</th>
+                          <th scope='col'>Date</th>
+                          <th scope='col'>Time</th>
+
+                        </tr>
+                      </thead>
+
+                      <tbody>
+
+                        <tr>
+                          <td>My Group 1</td>
+                          <td>JavaScript</td>
+                          <td>Jan 3 Tue</td>
+                          <td>9:00 AM - 11:00 AM</td>
+                        </tr>
+                        {{! <tr>
+                        <td>Mind &amp; Body</td>
+                        <td>Yoga</td>
+                        <td>8:00 AM - 9:00 AM</td>
+                        <td>Adam Stewart</td>
+                        <td>15</td>
+                      </tr>
+                      <tr>
+                        <td>Crit Cardio</td>
+                        <td>Gym</td>
+                        <td>9:00 AM - 10:00 AM</td>
+                        <td>Aaron Chapman</td>
+                        <td>10</td>
+                      </tr>
+                      <tr>
+                        <td>Wheel Pose Full Posture</td>
+                        <td>Yoga</td>
+                        <td>7:00 AM - 8:30 AM</td>
+                        <td>Donna Wilson</td>
+                        <td>15</td>
+                      </tr>
+                      <tr>
+                        <td>Playful Dancer's Flow</td>
+                        <td>Yoga</td>
+                        <td>8:00 AM - 9:00 AM</td>
+                        <td>Donna Wilson</td>
+                        <td>10</td>
+                      </tr>
+                      <tr>
+                        <td>Zumba Dance</td>
+                        <td>Dance</td>
+                        <td>5:00 PM - 7:00 PM</td>
+                        <td>Donna Wilson</td>
+                        <td>20</td>
+                      </tr>
+                      <tr>
+                        <td>Cardio Blast</td>
+                        <td>Gym</td>
+                        <td>5:00 PM - 7:00 PM</td>
+                        <td>Randy Porter</td>
+                        <td>10</td>
+                      </tr>
+                      <tr>
+                        <td>Pilates Reformer</td>
+                        <td>Gym</td>
+                        <td>8:00 AM - 9:00 AM</td>
+                        <td>Randy Porter</td>
+                        <td>10</td>
+                      </tr> }}
+
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+  </div>
+
+  <div
+    class='col-sm-4 w-25 p-3 m-3 mr-5'
+    style='background-color:blue; border-radius: 15px'
+  >
+    <!-- Button trigger modal -->
+    <button
+      type='button'
+       id='create-btn'
+      class='btn btn-primary btn-lg btn-block active text-white bg-dark mb-3'
+      data-mdb-toggle='modal'
+      data-mdb-target='#exampleModal'
+    >
+      Create Study Group
+    </button>
+
+    <!-- Modal -->
+    <div
+      class='modal fade'
+      id='exampleModal'
+      tabindex='-1'
+      aria-labelledby='exampleModalLabel'
+      aria-hidden='true'
+      data-mdb-backdrop='static'
+      data-mdb-keyboard='false'
+    >
+
+      <div
+        class='modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg'
+      >
+        <div class='modal-content'>
+          <div class='modal-header'>
+            <h5 class='modal-title' id='exampleModalLabel'>Modal title</h5>
+            <button
+              type='button'
+              class='btn-close'
+              data-mdb-dismiss='modal'
+              aria-label='Close'
+            ></button>
+          </div>
+
+          <!-- Modal BODY BEGIN-->
+          <div class='modal-body'>
+
+            <form class='form-outline' style="margin-top: 20px;">
+              <input
+                type='text'
+                id='formControlLg'
+                class='form-control form-control-lg '
+                data-mdb-showcounter="true" maxlength="20"
+              />
+              <label class='form-label' for='formControlLg'>Group Name</label>
+              <div class="form-helper"></div>
+            </form>
+
+            <form class='form-outline' style="margin-top: 20px;">
+              <input
+                type='text'
+                id='formControlLg'
+                class='form-control form-control-lg '
+                data-mdb-showcounter="true" maxlength="20"
+              />
+              <label class='form-label' for='formControlLg'>Topic</label>
+              <div class="form-helper"></div>
+            </form>
+
+          <!-- DATE PICKER BEGIN-->
+            <form class='form-outline' style="margin-top: 20px;">
+
+              <label style="margin-left: 20px;">Select Date: </label>
+                <div id="datepicker" class="input-group date" data-date-format="mm-dd-yyyy"
+                style="width: 180px; margin: 0 20px 20px 20px;"
+                >
+                  <input class="form-control" type="text" readonly />
+                    <span class="input-group-addon">
+                     {{!-- <i class="glyphicon glyphicon-calendar"></i> --}}
+                     <i class="fa-solid fa-calendar-days"></i>
+                    </span>
+                </div>
+
+            </form>
+          <!-- DATE PICKER BEGIN-->  
+            <form class='form-outline' style="margin-top: 20px;">
+              
+
+          </div>
+          <!-- Modal BODY END-->
+
+          <div class='modal-footer'>
+
+            <button
+              type='button'
+              class='btn btn-secondary'
+              data-mdb-dismiss='modal'
+            >
+            Close
+            </button>
+
+            <button type='button' 
+            class='btn btn-primary'
+             id='saveGroup-btn'
+            >
+            Save changes
+
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</form>
+
+</main>
+
+<script src='/js/createchat.js'></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+{{!-- </html> --}}
