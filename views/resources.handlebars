@@ -66,10 +66,11 @@
           </div>
           <div>
             {{#each bruh as |resource|}}
-          <p class="card-text"><span class="bold">Description:</span> {{resource.description}}</p>
-          <p class="card-text"><span class="bold">url:</span> {{resource.url}}</p>
+          <p class="card-text-r top"><span class="bold">Description:</span> {{resource.description}}</p>
+          <p class="card-text-r"><span class="bold">url:</span> <a href="{{resource.url}}">{{resource.url}}</a></p>
           {{!-- do we want to remove this? adding naming could make it really hard with the database stuff, will need to look at this tonight --}}
-          <p class="card-text last"><span class="bold">Author:</span> {{resource.user_id}}</p>
+          <p class="card-text-r last"><span class="bold">Author:</span> {{resource.user_id}}</p>
+          <hr />
           {{/each}}
         </div>
       </div>

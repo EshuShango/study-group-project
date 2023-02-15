@@ -79,8 +79,7 @@ includes styling for cards, bold text
   margin: 30px 30px 30px 70px;
 }
 
-.last {
-  border-bottom: 1px solid lightgray;
+hr {
   padding-bottom: 10px;
 }
 
@@ -112,6 +111,10 @@ includes styling for cards, bold text
   padding-top: 15px;
 }
 
-.card-text {
+.card-text-r {
   padding-left:30px;
 }
+
+/*
+--------RESOURCES page above--------
+*/
