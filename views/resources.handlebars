@@ -60,23 +60,22 @@
           {{!-- we will need to dynamically serve in the resources here, making a new <p> tage for each --}}
             {{!-- would be nice to somehow make a line between each resource being served --}}
 
-          <div>
-            {{#each bruh }}
-            <p>{{this.description}}</p>
-            {{/each}}
           </div>
-          <p class="card-text"><span class="bold">Description:</span> This will be where the description loads</p>
+          <div>
+            {{#each bruh as |resource|}}
+          <p class="card-text"><span class="bold">Description:</span> {{resource.description}}</p>
+          <p class="card-text"><span class="bold">url:</span> {{resource.url}}</p>
+          <p class="card-text last"><span class="bold">Author:</span> {{resource.name}}</p>
+          {{!-- <p class="card-text"><span class="bold">Description:</span> This will be where the description loads</p>
           <p class="card-text"><span class="bold">url:</span> https://randomurl.com</p>
-          <p class="card-text last"><span class="bold">Author:</span> Test User 2</p>
+          <p class="card-text  last"><span class="bold">Author:</span> Test User 2</p>
           <p class="card-text"><span class="bold">Description:</span> This will be where the description loads</p>
           <p class="card-text"><span class="bold">url:</span> https://randomurl.com</p>
           <p class="card-text  last"><span class="bold">Author:</span> Test User 2</p>
           <p class="card-text"><span class="bold">Description:</span> This will be where the description loads</p>
           <p class="card-text"><span class="bold">url:</span> https://randomurl.com</p>
-          <p class="card-text  last"><span class="bold">Author:</span> Test User 2</p>
-          <p class="card-text"><span class="bold">Description:</span> This will be where the description loads</p>
-          <p class="card-text"><span class="bold">url:</span> https://randomurl.com</p>
-          <p class="card-text  last"><span class="bold">Author:</span> Test User 2</p>
+          <p class="card-text  last"><span class="bold">Author:</span> Test User 2</p> --}}
+          {{/each}}
         </div>
       </div>
       {{!--row end div below --}}
@@ -119,14 +118,6 @@
     </div>
   </div>
   </div>
-
-
-  {{!-- <div>
-    {{#each bruh }}
-    <p>{{this.description}}</p>
-    {{/each}}
-  </div> --}}
-
 
 
 </body>
