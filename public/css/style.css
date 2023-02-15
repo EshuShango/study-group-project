@@ -111,3 +111,7 @@ includes styling for cards, bold text
 .modalTag{
   padding-top: 15px;
 }
+
+.card-text {
+  padding-left:30px;
+}

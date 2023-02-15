@@ -40,9 +40,12 @@
         <div class="card-body">
           <h5 class="card-title attendees">Attendees</h5>
           {{!-- we will need to dynamically serve in the GroupUsers here, making a new <p> tage for each --}}
-          <p class="card-text">Test User 1</p>
-          <p class="card-text">Test User 2</p>
-          <p class="card-text">Test User 3</p>
+
+          {{#each gu as |user|}}
+          <p class="card-text">{{user.user_id}}</p>
+          {{!-- <p class="card-text">Test User 2</p>
+          <p class="card-text">Test User 3</p> --}}
+          {{/each}}
         </div>
       </div>
 
@@ -65,16 +68,8 @@
             {{#each bruh as |resource|}}
           <p class="card-text"><span class="bold">Description:</span> {{resource.description}}</p>
           <p class="card-text"><span class="bold">url:</span> {{resource.url}}</p>
-          <p class="card-text last"><span class="bold">Author:</span> {{resource.name}}</p>
-          {{!-- <p class="card-text"><span class="bold">Description:</span> This will be where the description loads</p>
-          <p class="card-text"><span class="bold">url:</span> https://randomurl.com</p>
-          <p class="card-text  last"><span class="bold">Author:</span> Test User 2</p>
-          <p class="card-text"><span class="bold">Description:</span> This will be where the description loads</p>
-          <p class="card-text"><span class="bold">url:</span> https://randomurl.com</p>
-          <p class="card-text  last"><span class="bold">Author:</span> Test User 2</p>
-          <p class="card-text"><span class="bold">Description:</span> This will be where the description loads</p>
-          <p class="card-text"><span class="bold">url:</span> https://randomurl.com</p>
-          <p class="card-text  last"><span class="bold">Author:</span> Test User 2</p> --}}
+          {{!-- do we want to remove this? adding naming could make it really hard with the database stuff, will need to look at this tonight --}}
+          <p class="card-text last"><span class="bold">Author:</span> {{resource.user_id}}</p>
           {{/each}}
         </div>
       </div>
