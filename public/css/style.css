@@ -38,3 +38,72 @@
 /*
 --------BTN Func ABOVE--------
 */
+
+/*
+--------RESOURCES page below--------
+includes styling for cards, bold text
+*/
+
+.groupUser {
+  margin-right: 70px;
+  padding-bottom: 30px;
+  position: relative;
+  max-height: 500px;
+  overflow: auto;
+}
+
+.savedResources {
+  position: relative;
+  max-height: 500px;
+  overflow: auto;
+  font-size: 15px;
+  margin-right: 50px;
+}
+
+.attendees {
+  border-bottom: 1px solid gray;
+  padding-bottom:10px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.row1 {
+  margin: 30px 30px 50px 75px;
+  display: flex;
+}
+.row2 {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 30px 30px 30px 70px;
+}
+
+.last {
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 10px;
+}
+
+#addResource {
+  font-size: 10px;
+  padding: 5px 10px 5px 10px;
+  align-self: center;
+  justify-content: flex-end;
+  justify-self: right;
+}
+
+.resourceTitle {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  border-bottom: 1px solid gray;
+}
+
+#resourceTitleFlex {
+  align-items: left;
+}
+
+#addBtnFlex {
+  align-items: right;
+}
