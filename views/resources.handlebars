@@ -11,9 +11,9 @@
           <h5 class="card-title attendees">Attendees</h5>
           {{!-- we will need to dynamically serve in the GroupUsers here, making a new <p> tage for each --}}
 
-          {{#each gu as |user|}}
+          {{#each group.users_groups as |user|}}
           {{!-- need to only pull the first study group --}}
-          <p class="card-text">{{user.user_id}}</p>
+          <p class="card-text">{{user.first_name}} {{user.last_name}}</p>
           {{!-- <p class="card-text">Test User 2</p>
           <p class="card-text">Test User 3</p> --}}
           {{/each}}
@@ -40,7 +40,7 @@
           <p class="card-text-r top"><span class="bold">Description:</span> {{resource.description}}</p>
           <p class="card-text-r"><span class="bold">url:</span> <a href="{{resource.url}}">{{resource.url}}</a></p>
           {{!-- do we want to remove this? adding naming could make it really hard with the database stuff, will need to look at this tonight --}}
-          <p class="card-text-r last"><span class="bold">Submitted By:</span> {{resource.user_id}}</p>
+          <p class="card-text-r last"><span class="bold">Submitted By:</span> {{resource.user.first_name}} {{resource.user.last_name}}</p>
           <hr />
           {{/each}}
         </div>
@@ -70,11 +70,11 @@
             <input type="url" id="form12" class="form-control" />
             <label class="form-label" for="form12">Enter url here</label>
           </div>
-          <p class="modalTag">Submitted By</p>
+          {{!-- <p class="modalTag">Submitted By</p>
           <div class="form-outline">
             <input type="text" id="form12" class="form-control" />
             <label class="form-label" for="form12">Enter name here</label>
-          </div>
+          </div> --}}
         </div>
 
         <div class="modal-footer">

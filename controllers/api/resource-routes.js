@@ -1,9 +1,16 @@
 const router = require("express").Router();
-const { Resource, GroupUser } = require("../../models");
+const { Resource, GroupUser, } = require("../../models");
 
 router.get('/', async (req, res) => {
   try {
-    const resourceData = await Resource.findAll();
+    const resourceData = await Resource.findAll({
+      include: [
+        {
+          model: User,
+          required: false
+        }
+      ]
+    });
     const groupUserData = await GroupUser.findAll();
     const bruh = resourceData.map((data) => data.get({plain:true}));
     const gu = groupUserData.map((gudata) => gudata.get({plain:true}));
