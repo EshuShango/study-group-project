@@ -1,18 +1,18 @@
 const router = require("express").Router();
-const { Resource } = require("../../models");
+const { Resource, GroupUser } = require("../../models");
 
 router.get('/', async (req, res) => {
   try {
     const resourceData = await Resource.findAll();
-
+    const groupUserData = await GroupUser.findAll();
     const bruh = resourceData.map((data) => data.get({plain:true}));
-
-    res.status(200).json(bruh);
+    const gu = groupUserData.map((gudata) => gudata.get({plain:true}));
+    res.status(200).json({bruh,gu});
   }
   catch (err) {
     res.status(500).json(err);
   }
-  // res.render('resources');
+  res.render('resources');
 });
 
 router.post('/', (req, res) => {
