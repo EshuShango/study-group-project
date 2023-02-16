@@ -1,4 +1,5 @@
 const resourceFormBtn = document.getElementById('addResource');
+const launchVideoBtn = document.getElementById('launchVideo');
 const urlField = document.getElementById('formurl');
 const descriptionField = document.getElementById('formdescription');
 const userField = req.body.user_id;
@@ -27,5 +28,6 @@ if (response.ok) {
 };
 console.log(addResource);
 
-resourceFormBtn.addEventListener('click', addResource);
+resourceFormBtn.addEventListener('click', addResource());
 
+launchVideoBtn.addEventListener('click', addResource);

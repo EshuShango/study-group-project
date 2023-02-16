@@ -23,7 +23,6 @@ router.get('/resources/:id', async (req, res) => {
         }
       ]
     });
-    console.log("------------anything---------------")
     const groupData = await Group.findByPk(req.params.id,
       {
         include: [
@@ -34,7 +33,6 @@ router.get('/resources/:id', async (req, res) => {
           }
         ]
       });
-    console.log("------------more anythings---------------")
     const bruh = resourceData.map((data) => data.get({ plain: true }));
     const group = groupData.get({ plain: true });
     res.render('resources', { bruh, group });
