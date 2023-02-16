@@ -2,7 +2,9 @@ const router = require("express").Router();
 const { User, Chat, Resource, GroupUser, Group } = require('../models');
 
 router.get('/', async (req, res) => {
-  res.render('homepage');
+  res.render('homepage', {
+    logged_in: req.session.logged_in
+  });
 });
 
 router.get('/login', async (req, res) => {
@@ -52,5 +54,18 @@ router.get("/videoroom", async (req, res) => {
     res.status(500).json(err);
   }
 })
+
+router.get('/chatroom', async (req, res) => {
+  try {
+    res.render('chatroom');
+    // const chatLogs = await Chat.findAll();
+    // res.status(200).json({chatLogs});
+  }
+
+  catch (err) {
+    res.status(500).json(err);
+  }
+  
+});
 
 module.exports = router;

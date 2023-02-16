@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
 
-
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  font-family: "Nova Square", cursive;
+  font-family: 'Nova Square', cursive;
 }
 
 /* ----------------------------------------------
@@ -13,11 +14,22 @@
   Twitter: @xsgames_
 ---------------------------------------------- */
 
-.shadow-drop-center{animation:shadow-drop-center 0.4s linear both} 
-  @keyframes  
-    shadow-drop-center{0%{box-shadow:0 0 0 0 transparent}100%{box-shadow:0 0 20px 0 rgba(255,255,255,.55)}}
+.shadow-drop-center {
+  animation: shadow-drop-center 0.4s linear both;
+}
+@keyframes shadow-drop-center {
+  0% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+  100% {
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.55);
+  }
+}
 
 /*
+
+
+
 --------BTN Func BELOW--------
 */
 
@@ -38,6 +50,43 @@
 /*
 --------BTN Func ABOVE--------
 */
+
+/*
+--------Homepage Hero Section--------
+*/
+
+.hero {
+  background-image: url(../img/hero-1200.jpg);
+  background-size: cover;
+  background-position-y: center;
+
+  
+  padding: 275px 0px;
+}
+
+@media screen and (max-width: 576px) {
+  .hero {
+    background-image: url(../img/hero-800.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    padding: 100px 0;
+  }
+}
+
+
+/* Homepage Card Styles  */
+
+.card.hero-card {
+  width: 25%;
+}
+
+@media screen and (max-width: 768px) {
+  .card.hero-card {
+    width: 75%;
+  }
+}
+
 
 /*
 --------RESOURCES page below--------
@@ -126,3 +175,4 @@ hr {
 /*
 --------RESOURCES page above--------
 */
+
