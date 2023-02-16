@@ -32,17 +32,6 @@ Group.init(
       type:DataTypes.DATE,
       allowNull:false,
     },
-    resource_id:{
-      type:DataTypes.INTEGER,
-      allowNull:false,
-      references:{
-        model:'resource',
-        key:'id'
-      },
-      validate:{
-        len:[1]
-      }
-    }
 
   },
   {
