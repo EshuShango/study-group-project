@@ -9,15 +9,17 @@ async function addResource() {
   const obj = {
       "url": urlField.value,
       "description": descriptionField.value,
-      "user_id": userField.value,
-      "group_id": groupField.value,
+    //   "user_id": userField.value,
+    //   "group_id": groupField.value,
   };
-  const response = await fetch('/api/resource/', {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(obj)
+  console.log(obj);
+//   const response = await fetch('/api/resource/', {
+//     method: 'POST',
+//     headers: {
+//         'Content-Type': 'application/json'
+//     },
+//     body: JSON.stringify(obj)
+    
 });
 
 if (response.ok) {
@@ -26,8 +28,8 @@ if (response.ok) {
     alert(response.statusText);
 }
 };
-console.log(addResource);
+
 
 resourceFormBtn.addEventListener('click', addResource());
 
-launchVideoBtn.addEventListener('click', () => {console.log("click"),window.location.href="/videoroom"});
+launchVideoBtn.addEventListener('click', () => {window.location.href="/videoroom"});
