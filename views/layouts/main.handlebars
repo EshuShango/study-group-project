@@ -60,17 +60,18 @@
         <nav class="navbar navbar-light bg-light">
           <a class="navbar-brand ps-3">Study Budd</a>
           {{#if logged_in}}
-          <button id='logoutBtn' type="button" class="btn btn-outline-dark btn-rounded me-5" data-mdb-ripple-color="dark">Logout</button>
+          <ul class="d-flex align-items-center gap-4 m-0">
+            <a class="navbar-item text-dark" href="">Study Groups</a>
+            <button id='logoutBtn' type="button" class="btn btn-outline-dark btn-rounded me-5" data-mdb-ripple-color="dark">Logout</button>
+          </ul>
           {{else}}
           <button id='loginBtn' type="button" class="btn btn-outline-dark btn-rounded" data-mdb-ripple-color="dark">Login</button>
           {{/if}}
         </nav>
       </div>
     </header>
-    <main class="">
-      <!-- Render the sub layout -->
-      {{{ body }}}
-    </main>
+    <!-- Render the sub layout -->
+    {{{ body }}}
     <footer>
       
     </footer>
@@ -78,6 +79,8 @@
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
+  {{else}}
+  <script src="/js/home.js"></script>
   {{/if}}
   <!-- MDB -->
   <script
