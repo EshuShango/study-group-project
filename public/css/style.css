@@ -64,6 +64,30 @@
   padding: 275px 0px;
 }
 
+@media screen and (max-width: 576px) {
+  .hero {
+    background-image: url(../img/hero-800.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    padding: 100px 0;
+  }
+}
+
+
+/* Homepage Card Styles  */
+
+.card.hero-card {
+  width: 25%;
+}
+
+@media screen and (max-width: 768px) {
+  .card.hero-card {
+    width: 75%;
+  }
+}
+
+
 /*
 --------RESOURCES page below--------
 includes styling for cards, bold text

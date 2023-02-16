@@ -2,7 +2,9 @@ const router = require("express").Router();
 const { User, Chat, Resource, GroupUser, Group } = require('../models');
 
 router.get('/', async (req, res) => {
-  res.render('homepage');
+  res.render('homepage', {
+    logged_in: req.session.logged_in
+  });
 });
 
 router.get('/login', async (req, res) => {
