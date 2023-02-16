@@ -12,6 +12,10 @@ router.get('/login', async (req, res) => {
 router.get('/resources/:id', async (req, res) => {
   try {
     const resourceData = await Resource.findAll({
+      where:
+        {
+          group_id: req.params.id
+        },
       include: [
         {
           model: User,
@@ -22,10 +26,6 @@ router.get('/resources/:id', async (req, res) => {
     console.log("------------anything---------------")
     const groupData = await Group.findByPk(req.params.id,
       {
-        where:
-        {
-          resource_id: req.params.id
-        },
         include: [
           {
             model: User,

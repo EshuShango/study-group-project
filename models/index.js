@@ -44,12 +44,12 @@ Chat.belongsTo(Group, {
 });
 
 Group.hasMany(Resource, {
-  foreignKey:"resource_id",
+  foreignKey:"group_id",
   onDelete:"CASCADE",
 });
 
 Resource.belongsTo(Group, {
-  foreignKey:"resource_id",
+  foreignKey:"group_id",
 });
   
 //bruh
