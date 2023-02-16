@@ -66,18 +66,14 @@
     <header>
 
       <div class='container-fluid'>
-        <nav class='navbar navbar-light bg-light'>
-          <a class='navbar-brand ps-3'>Study Budd</a>
+        <nav class='navbar navbar-light bg-light flex-column flex-sm-row'>
+          <a href="/" class='navbar-brand ps-3'>Study Budd</a>
           {{#if logged_in}}
 
-            <button
-              id='logoutBtn'
-              type='button'
-              class='btn btn-outline-dark btn-rounded me-5 no-button
-              shadow-pop-bottom-left
-              '
-              data-mdb-ripple-color='dark'
-            >Logout</button>
+            <ul class="d-flex align-items-center gap-4 m-0">
+              <a class="navbar-item text-dark" href="/api/chat/">Study Groups</a>
+              <button id='logoutBtn' type="button" class="btn btn-outline-dark btn-rounded me-5 no-button shadow-pop-bottom-left" data-mdb-ripple-color="dark">Logout</button>
+            </ul>
 
 
           {{else}}
@@ -107,6 +103,8 @@
     <!-- Render script for logged in users only -->
     {{#if logged_in}}
       <script src='/js/logout.js'></script>
+    {{else}}
+      <script src='/js/home.js'></script>
     {{/if}}
     <!-- MDB -->
     <script
