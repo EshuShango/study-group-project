@@ -27,6 +27,17 @@ Resource.init(
         key: "id",
         },
     },
+    group_id:{
+      type:DataTypes.INTEGER,
+      allowNull:false,
+      references:{
+        model:'group',
+        key:'id'
+      },
+      validate:{
+        len:[1]
+      }
+    }
   },
   {
     sequelize,

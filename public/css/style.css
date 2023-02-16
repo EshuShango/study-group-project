@@ -162,6 +162,30 @@
   padding: 275px 0px;
 }
 
+@media screen and (max-width: 576px) {
+  .hero {
+    background-image: url(../img/hero-800.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    padding: 100px 0;
+  }
+}
+
+
+/* Homepage Card Styles  */
+
+.card.hero-card {
+  width: 25%;
+}
+
+@media screen and (max-width: 768px) {
+  .card.hero-card {
+    width: 75%;
+  }
+}
+
+
 /*
 --------RESOURCES page below--------
 includes styling for cards, bold text
@@ -195,15 +219,14 @@ includes styling for cards, bold text
 .row1 {
   margin: 30px 30px 50px 75px;
   display: flex;
+  justify-content: space-between;
 }
 .row2 {
   display: flex;
-  flex-wrap: nowrap;
   margin: 30px 30px 30px 70px;
 }
 
-.last {
-  border-bottom: 1px solid lightgray;
+hr {
   padding-bottom: 10px;
 }
 
@@ -234,6 +257,7 @@ includes styling for cards, bold text
 .modalTag {
   padding-top: 15px;
 }
+
 
 /*
 -----------------------
@@ -339,3 +363,21 @@ label {
   border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
   border-image: initial;
 } */
+
+.card-text-r {
+  padding-left:30px;
+}
+
+#groupInfoFlex {
+  align-items: left;
+}
+
+#launchVideo {
+  align-items: right;
+}
+
+/*
+--------RESOURCES page above--------
+*/
+
+

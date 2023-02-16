@@ -64,6 +64,7 @@
 
   <body>
     <header>
+
       <div class='container-fluid'>
         <nav class='navbar navbar-light bg-light'>
           <a class='navbar-brand ps-3'>Study Budd</a>
@@ -76,6 +77,7 @@
               '
               data-mdb-ripple-color='dark'
             >Logout</button>
+
           {{else}}
             <button
               id='loginBtn'
@@ -89,13 +91,16 @@
         </nav>
       </div>
     </header>
-    <main class=''>
+
+    
       <!-- Render the sub layout -->
       {{{body}}}
-    </main>
+   
+
     <footer>
 
     </footer>
+
 
     <!-- Render script for logged in users only -->
     {{#if logged_in}}
@@ -108,5 +113,6 @@
     ></script>
 
   </body>
+
 
 </html>
