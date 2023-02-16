@@ -15,17 +15,20 @@ Group.init(
     name:{
       type:DataTypes.STRING,
       allowNull:false,
+
+      unique:true,
+      // isUnique:true,
       validate: {
         len:[4],
-        isUnique:true,
       }
     },
     subject:{
       type:DataTypes.STRING,
       allowNull:false,
+      unique:true,
       validate:{
         len:[4],
-        isUnique:true,
+
       }
     },
     date:{

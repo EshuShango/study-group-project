@@ -58,12 +58,35 @@ router.get('/chatroom', async (req, res) => {
     res.render('chatroom', {logged_in: req.session.logged_in});
     // const chatLogs = await Chat.findAll();
     // res.status(200).json({chatLogs});
-  }
-
-  catch (err) {
-    res.status(500).json(err);
-  }
   
+      const groupData = await Group.findAll();
+
+      console.log(groupData);
+
+      const groups = groupData.map((group) => group.get({ plain: true }));
+
+      console.log(groups);
+
+      res.render('chatroom', {
+          groups,
+          logged_in: req.session.logged_in
+      });
+  } catch (err) {
+      res.status(500).json(err);
+  };
 });
+
+// router.get('/chatroom', async (req, res) => {
+//   try {
+//     res.render('chatroom');
+//     // const chatLogs = await Chat.findAll();
+//     // res.status(200).json({chatLogs});
+//   }
+
+//   catch (err) {
+//     res.status(500).json(err);
+//   }
+  
+// });
 
 module.exports = router;
