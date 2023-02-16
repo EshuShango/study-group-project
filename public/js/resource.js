@@ -23,7 +23,7 @@ async function addResource() {
     });
 
     if (response.ok) {
-        document.location.replace('/resources/:id');
+        document.location.replace(`/resources/${groupField.value}`);
     } else {
         alert(response.statusText);
     }
