@@ -1,92 +1,120 @@
-{{!-- ! WE HAVE TO FILL IN NECESSARY CODE etc --}}
+{{! ! WE HAVE TO FILL IN NECESSARY CODE etc }}
 
-<!DOCTYPE html>
-<html lang="en">
+
+<html lang='en'>
   <head>
     <title>Study Budd</title>
     <!-- Required meta tags -->
-    <meta charset="utf-8" />
+    <meta charset='utf-8' />
     <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      name='viewport'
+      content='width=device-width, initial-scale=1, shrink-to-fit=no'
     />
+  
     <!--day.JS -->
-    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js'></script>
     <!--MDB (BS on steriods !)-->
     <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"
+      type='text/javascript'
+      src='https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js'
     ></script>
-        <!-- ajax -->
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-   
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
+      src='https://code.jquery.com/jquery-3.3.1.slim.min.js'
+      integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo'
+      crossorigin='anonymous'
     ></script>
     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
+      src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js'
+      integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1'
+      crossorigin='anonymous'
     ></script>
     <!-- (MDB) Bootstrap CSS -->
-    <link rel="stylesheet" href="/css/style.css" />
-    {{!-- <link rel="stylesheet" href="/study-group-project/public/css/style.css" /> --}}
+    <link rel='stylesheet' href='/css/style.css' />
+    {{! <link rel="stylesheet" href="/study-group-project/public/css/style.css" /> }}
 
     <!-- Font Awesome -->
     <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      rel="stylesheet"
+      href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css'
+      rel='stylesheet'
     />
-    <script src="https://kit.fontawesome.com/8c87e93458.js" crossorigin="anonymous"></script>
-    
+    <script
+      src='https://kit.fontawesome.com/8c87e93458.js'
+      crossorigin='anonymous'
+    ></script>
+    <link
+      rel='stylesheet'
+      href='https://use.fontawesome.com/releases/v5.3.1/css/all.css'
+      integrity='sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU'
+      crossorigin='anonymous'
+    />
+
     <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-      rel="stylesheet"
+      href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap'
+      rel='stylesheet'
     />
     <!-- MDB -->
     <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.css"
-      rel="stylesheet"
+      href='https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.css'
+      rel='stylesheet'
     />
   </head>
 
   <body>
     <header>
-      <div class="container-fluid">
-        <nav class="navbar navbar-light bg-light flex-column flex-sm-row">
-          <a class="navbar-brand ps-3">Study Budd</a>
+
+      <div class='container-fluid'>
+        <nav class='navbar navbar-light bg-light'>
+          <a class='navbar-brand ps-3'>Study Budd</a>
           {{#if logged_in}}
-          <ul class="d-flex align-items-center gap-4 m-0">
-            <a class="navbar-item text-dark" href="/api/chat/">Study Groups</a>
-            <button id='logoutBtn' type="button" class="btn btn-outline-dark btn-rounded me-5" data-mdb-ripple-color="dark">Logout</button>
-          </ul>
+
+            <button
+              id='logoutBtn'
+              type='button'
+              class='btn btn-outline-dark btn-rounded me-5 no-button
+              shadow-pop-bottom-left
+              '
+              data-mdb-ripple-color='dark'
+            >Logout</button>
+
+
           {{else}}
-          <button id='loginBtn' type="button" class="btn btn-outline-dark btn-rounded" data-mdb-ripple-color="dark">Login</button>
+            <button
+              id='loginBtn'
+              type='button'
+              class='btn btn-outline-dark btn-rounded no-button
+              shadow-pop-bottom-right
+              '
+              data-mdb-ripple-color='dark'
+            >Login</button>
           {{/if}}
         </nav>
       </div>
     </header>
-    <!-- Render the sub layout -->
-    {{{ body }}}
+
+    
+      <!-- Render the sub layout -->
+      {{{body}}}
+   
+
     <footer>
-      
+
     </footer>
 
-  <!-- Render script for logged in users only -->
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{else}}
-  <script src="/js/home.js"></script>
-  {{/if}}
-  <!-- MDB -->
-  <script
-    type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"
-  ></script>
-</body>
+
+    <!-- Render script for logged in users only -->
+    {{#if logged_in}}
+      <script src='/js/logout.js'></script>
+    {{/if}}
+    <!-- MDB -->
+    <script
+      type='text/javascript'
+      src='https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js'
+    ></script>
+
+  </body>
+
 
 </html>

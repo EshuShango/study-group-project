@@ -1,9 +1,14 @@
+const express = require("express");
+const path = require("path");
+const fs = require("fs");
 const router = require('express').Router();
 const { Chat } = require('../../models');
 
 router.get('/', async (req, res) => {
   try {
+    const dbChat =
     res.render('chatroom');
+
     // const chatLogs = await Chat.findAll();
     // res.status(200).json({chatLogs});
   }
