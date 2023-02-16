@@ -45,13 +45,16 @@
                       </thead>
 
                       <tbody >
-                        <tr class='stygrp-card'>
-                          <td class="grp-name">My Group</td>
-                          <td class="grp-topic">JavaScript</td>
-                          <td class="sty-date">1/3/2023</td>
-                          <td class="sty-time">9:00</td>
+                        
+                      {{#each groups as |group|}}
+                      <tr class='stygrp-card'>
+                          <td class="grp-name"><a href='/resources/{{group.id}}'>{{group.name}}</a></td>
+                          <td class="grp-topic">{{group.subject}}</td>
+                          <td class="sty-date">{{group.date}}</td>
+                          <td class="sty-time">{{group.time}}</td>
                         </tr>
-                  
+                      {{/each}}
+
                       </tbody>
                     </table>
                   </div>
@@ -245,4 +248,4 @@
 
 </main>
 
-<script src='/study-group-project/public/js/createchat.js'></script>
+{{!-- <script src='/study-group-project/public/js/createchat.js'></script> --}}
