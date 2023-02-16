@@ -30,4 +30,4 @@ console.log(addResource);
 
 resourceFormBtn.addEventListener('click', addResource());
 
-launchVideoBtn.addEventListener('click', addResource);
+launchVideoBtn.addEventListener('click', window.location.replace("https://localhost:3001/videoroom"));
