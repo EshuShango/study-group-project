@@ -55,21 +55,17 @@
   </head>
 
   <body>
-  <div class="">
- <header>
-
-      <nav class="navbar navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand">Study Budd</a>
+    <header>
+      <div class="container-fluid">
+        <nav class="navbar navbar-light bg-light">
+          <a class="navbar-brand ps-3">Study Budd</a>
           {{#if logged_in}}
-          <button id='logoutBtn' type="button" class="btn btn-outline-dark btn-rounded" data-mdb-ripple-color="dark">Logout</button>
+          <button id='logoutBtn' type="button" class="btn btn-outline-dark btn-rounded me-5" data-mdb-ripple-color="dark">Logout</button>
           {{else}}
-
           <button id='loginBtn' type="button" class="btn btn-outline-dark btn-rounded" data-mdb-ripple-color="dark">Login</button>
-
           {{/if}}
-        </div>
-      </nav>
+        </nav>
+      </div>
     </header>
     <main class="">
       <!-- Render the sub layout -->
@@ -78,8 +74,6 @@
     <footer>
       
     </footer>
-  </div>
-  
 
   <!-- Render script for logged in users only -->
   {{#if logged_in}}

@@ -51,6 +51,18 @@
 --------BTN Func ABOVE--------
 */
 
+/*
+--------Homepage Hero Section--------
+*/
+
+.hero {
+  background-image: url(../img/hero-1200.jpg);
+  background-size: cover;
+  background-position-y: center;
+
+  
+  padding: 275px 0px;
+}
 
 /*
 --------RESOURCES page below--------
