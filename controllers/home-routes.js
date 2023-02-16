@@ -35,7 +35,7 @@ router.get('/resources/:id', async (req, res) => {
       });
     const bruh = resourceData.map((data) => data.get({ plain: true }));
     const group = groupData.get({ plain: true });
-    res.render('resources', { bruh, group, logged_in: 3, group_id:group.id});
+    res.render('resources', { bruh, group, logged_in: req.session.logged_in, user_id:req.session.user_id, group_id:group.id});
   }
   catch (err) {
     res.status(500).json(err);
