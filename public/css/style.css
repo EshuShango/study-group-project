@@ -191,12 +191,14 @@
 includes styling for cards, bold text
 */
 
+
 .groupUser {
-  margin-right: 70px;
+  margin-right: 20px;
   padding-bottom: 30px;
   position: relative;
   max-height: 500px;
   overflow: auto;
+  min-width: 500px;
 }
 
 .savedResources {
@@ -205,6 +207,11 @@ includes styling for cards, bold text
   overflow: auto;
   font-size: 15px;
   margin-right: 50px;
+  min-width: 500px;
+}
+
+.card-body {
+  min-width: 300px;
 }
 
 .attendees {
@@ -219,11 +226,14 @@ includes styling for cards, bold text
 .row1 {
   margin: 30px 30px 50px 75px;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  
 }
 .row2 {
   display: flex;
-  margin: 30px 30px 30px 70px;
+  flex-direction: row;
+  /* margin: 30px 30px 30px 70px; */
 }
 
 hr {
@@ -250,6 +260,14 @@ hr {
   align-items: left;
 }
 
+#groupInfoFlex {
+  align-items: left;
+}
+
+#launchVideo {
+  align-items: right;
+}
+
 #addBtnFlex {
   align-items: right;
 }
@@ -258,7 +276,45 @@ hr {
   padding-top: 15px;
 }
 
+@media screen and (max-width: 768px) {
+  
+  .row1 {
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
 
+  .row2 {
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .groupUser {
+    padding-bottom: 30px;
+    overflow: auto;
+    min-width: 500px;
+  }
+  
+  .savedResources {
+    position: relative;
+    max-height: 500px;
+    overflow: auto;
+    font-size: 15px;
+    min-width: 500px;
+  }
+  .card-body {
+    min-width: 300px;
+  }
+}
+
+.btnstyle {
+  background-color: black;
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+}
 /*
 -----------------------
 */

@@ -2,15 +2,15 @@
 <main class="container-fluid">
   <div class="row1">
     <div id="groupInfoFlex">
-      {{group.name}}: {{group.subject}}, {{group.date}} @ {{group.time}}
+      <h5>{{group.name}}: {{group.subject}}, {{group.date}} @ {{group.time}}</h5>
     </div>
     <div>
-      <button class="btn btn-outline-dark btn-rounded" id="launchVideo">Start a Chat</button>
+      <button class="btnstyle btn-rounded" id="launchVideo">Start a Chat</button>
     </div>
   </div>
 
   <div class="row2">
-    <div class="card col-4 groupUser">
+    <div class="card col-sm-12 col-lg-4 groupUser">
       <div class="card-body">
         <h5 class="card-title attendees">Attendees</h5>
         {{!-- we will need to dynamically serve in the GroupUsers here, making a new <p> tage for each --}}
@@ -24,14 +24,14 @@
       </div>
     </div>
 
-    <div class="card col-7 savedResources">
+    <div class="card col-sm-12 col-lg-7 savedResources">
       <div class="card-body">
         <div class="resourceTitle">
           <div id="resourceTitleFlex">
             <h5 class="card-title">Resources</h5>
           </div>
           <div id="addBtnFlex">
-            <button type="button" class="btn btn-outline-dark btn-rounded" id="addResourceLaunch"
+            <button type="button" class="btnstyle btn-rounded" id="addResourceLaunch"
               data-mdb-toggle="modal" data-mdb-target="#staticBackdrop">Add a Resource</button>
           </div>
         </div>
