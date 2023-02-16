@@ -6,7 +6,7 @@ const { Chat } = require('../../models');
 
 router.get('/', async (req, res) => {
   try {
-    const dbChat =
+    // const dbChat =
     res.render('chatroom');
 
     // const chatLogs = await Chat.findAll();
@@ -21,6 +21,7 @@ router.get('/', async (req, res) => {
 
 router.post('/', (req, res) => {
  
+  console.log(req.body);
     Chat.create(req.body)
     .then((chatLogs) => {
       res.status(200).json(chatLogs);
