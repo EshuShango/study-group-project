@@ -40,8 +40,9 @@
       </div>
       <div>
         {{#each bruh as |resource|}}
-        <p class="card-text-r top"><span class="bold">Description:</span> {{resource.description}}</p>
         <p class="card-text-r"><span class="bold">url:</span> <a href="{{resource.url}}">{{resource.url}}</a></p>
+        <p class="card-text-r top"><span class="bold">Description:</span> {{resource.description}}</p>
+        
         {{!-- do we want to remove this? adding naming could make it really hard with the database stuff, will need to
         look at this tonight --}}
         <p class="card-text-r last"><span class="bold">Submitted By:</span> {{resource.user.first_name}}
@@ -65,16 +66,17 @@
           <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <p class="modalTag">Description</p>
-          <div class="form-outline">
-            <input type="textarea" id="form12" class="form-control" />
-            <label class="form-label" for="form12">Enter description here</label>
-          </div>
           <p class="modalTag">url</p>
           <div class="form-outline">
-            <input type="url" id="form12" class="form-control" />
+            <input type="url" id="formurl" class="form-control" />
             <label class="form-label" for="form12">Enter url here</label>
           </div>
+          <p class="modalTag">Description</p>
+          <div class="form-outline">
+            <input type="textarea" id="formdescription" class="form-control" />
+            <label class="form-label" for="form12">Enter description here</label>
+          </div>
+          
           {{!-- <p class="modalTag">Submitted By</p>
           <div class="form-outline">
             <input type="text" id="form12" class="form-control" />
@@ -84,7 +86,7 @@
 
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" id="addResource">Add</button>
+          <button type="button" class="btn btn-primary" id="addResource" value="{{post.id}}">Add</button>
         </div>
       </div>
     </div>
@@ -92,3 +94,5 @@
   </div>
 
 </main>
+
+<script src="../public/js/resource.js"></script>
