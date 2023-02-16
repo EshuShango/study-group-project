@@ -1,7 +1,7 @@
 <main class="container-fluid">
   <div class="row1">
     <div id="groupInfoFlex">
-      {{group.name}}: {{group.subject}} {{group.date}} {{group.date}}
+      {{group.name}}: {{group.subject}}, {{group.date}} @ {{group.time}}
     </div>
     <div>
       <button class="btn btn-outline-dark btn-rounded" id="launchVideo">Start a Chat</button>
@@ -76,8 +76,8 @@
             <input type="textarea" id="formdescription" class="form-control" />
             <label class="form-label" for="form12">Enter description here</label>
           </div>
-          <input type="hidden" id="userId" name="userId" value="13" />
-          <input type="hidden" id="groupId" name="groupId" value="2" />
+          <input type="hidden" id="userId" name="userId" value={{logged_in}} />
+          <input type="hidden" id="groupId" name="groupId" value={{group.id}} />
           {{!-- <p class="modalTag">Submitted By</p>
           <div class="form-outline">
             <input type="text" id="form12" class="form-control" />
