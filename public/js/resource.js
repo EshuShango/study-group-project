@@ -2,8 +2,8 @@ const resourceFormBtn = document.getElementById('addResource');
 const launchVideoBtn = document.getElementById('launchVideo');
 const urlField = document.getElementById('formurl');
 const descriptionField = document.getElementById('formdescription');
-const userField = req.body.user_id;
-const groupField = req.body.group_id;
+// const userField = req.body.user_id;
+// const groupField = req.body.group_id;
 
 async function addResource() {
   const obj = {
@@ -30,4 +30,4 @@ console.log(addResource);
 
 resourceFormBtn.addEventListener('click', addResource());
 
-launchVideoBtn.addEventListener('click', window.location.replace("https://localhost:3001/videoroom"));
+launchVideoBtn.addEventListener('click', () => {console.log("click"),window.location.href="/videoroom"});
