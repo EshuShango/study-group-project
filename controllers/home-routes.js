@@ -1,5 +1,7 @@
 const router = require("express").Router();
 const { User, Chat, Resource, GroupUser, Group } = require('../models');
+const {format_date} = require('../utils/helpers');
+const {format_time} = require('../utils/helpers');
 
 router.get('/', async (req, res) => {
   res.render('homepage', {
@@ -25,7 +27,6 @@ router.get('/resources/:id', async (req, res) => {
         }
       ]
     });
-    console.log("------------anything---------------")
     const groupData = await Group.findByPk(req.params.id,
       {
         include: [
@@ -36,10 +37,10 @@ router.get('/resources/:id', async (req, res) => {
           }
         ]
       });
-    console.log("------------more anythings---------------")
     const bruh = resourceData.map((data) => data.get({ plain: true }));
     const group = groupData.get({ plain: true });
-    res.render('resources', { bruh, group });
+    group.date_time = format_date(group.date_time);
+    res.render('resources', { bruh, group, logged_in: req.session.logged_in});
   }
   catch (err) {
     res.status(500).json(err);
@@ -48,7 +49,7 @@ router.get('/resources/:id', async (req, res) => {
 
 router.get("/videoroom", async (req, res) => {
   try {
-    res.render("videochat");
+    res.render("videochat", {logged_in: req.session.logged_in});
   }
   catch (err) {
     res.status(500).json(err);
