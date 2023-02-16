@@ -72,10 +72,10 @@ includes styling for cards, bold text
 .row1 {
   margin: 30px 30px 50px 75px;
   display: flex;
+  justify-content: space-between;
 }
 .row2 {
   display: flex;
-  flex-wrap: nowrap;
   margin: 30px 30px 30px 70px;
 }
 
@@ -113,6 +113,14 @@ hr {
 
 .card-text-r {
   padding-left:30px;
+}
+
+#groupInfoFlex {
+  align-items: left;
+}
+
+#launchVideo {
+  align-items: right;
 }
 
 /*
