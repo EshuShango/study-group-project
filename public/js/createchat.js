@@ -2,9 +2,6 @@ const grpName = document.getElementById('formname');
 const grpTopic = document.getElementById('formsubject');
 const styDate = document.getElementById('formdate');
 const styTime = document.getElementById('formtime');
-
-// const styGrpLink = document.querySelectorAll('.stygrp-ctnr .stygrp-card ');
-
 const saveBtn = document.getElementById('create-group');
 
   async function addGroup(e) {
