@@ -71,4 +71,5 @@ THEN I am able to create and view study groups as well as add resources and laun
  * `Refactor code to be more efficient` 
  * `Make UI "prettier"` 
  * `Continued improvements to make the app more user friendly` 
-
+ * `Add functionality to manage your user profile` 
+  * `Add functionality to dm other users` 
