@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const { User, Resource, Group } = require('../models');
+const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   res.render('homepage', {
@@ -11,7 +12,7 @@ router.get('/login', async (req, res) => {
   res.render('login', {});
 });
 
-router.get('/resources/:id', async (req, res) => {
+router.get('/resources/:id', withAuth, async (req, res) => {
   try {
     const resourceData = await Resource.findAll({
       where:
@@ -44,7 +45,7 @@ router.get('/resources/:id', async (req, res) => {
   }
 });
 
-router.get("/videoroom", async (req, res) => {
+router.get("/videoroom", withAuth, async (req, res) => {
   try {
     res.render("videochat", {logged_in: req.session.logged_in});
   }
@@ -53,7 +54,7 @@ router.get("/videoroom", async (req, res) => {
   }
 })
 
-router.get('/chatroom', async (req, res) => {
+router.get('/chatroom', withAuth, async (req, res) => {
   try {
     
       const groupData = await Group.findAll();
