@@ -72,4 +72,5 @@ THEN I am able to create and view study groups as well as add resources and laun
  * `Make UI "prettier"` 
  * `Continued improvements to make the app more user friendly` 
  * `Add functionality to manage your user profile` 
-  * `Add functionality to dm other users` 
+ * `Add functionality to dm other users` 
+ * `Add functionality for the user-owner to delete study groups` 
