@@ -6,7 +6,7 @@
 ## Links
 
 - The repo of the note app: [Source Code](https://github.com/EshuShango/study-group-project)
-- Here is the link of live demo app via Heroku: [Demo]()
+- Here is the link of live demo app via Heroku: [Demo](https://study-bud.herokuapp.com/)
 
 
 ## Description 🔎
