@@ -58,12 +58,8 @@ router.get('/chatroom', async (req, res) => {
     
       const groupData = await Group.findAll();
 
-      console.log(groupData);
-
       const groups = groupData.map((group) => group.get({ plain: true }));
-
-      console.log(groups);
-
+      
       res.render('chatroom', {
           groups,
           logged_in: req.session.logged_in
