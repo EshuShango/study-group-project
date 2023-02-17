@@ -7,8 +7,8 @@ const styTime = document.getElementById('formtime');
 
 const saveBtn = document.getElementById('create-group');
 
-  async function addGroup() {
-
+  async function addGroup(e) {
+    e.preventDefault();
       const obj = {
           name: grpName.value,
           subject: grpTopic.value,
