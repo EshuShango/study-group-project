@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Chat, Resource, GroupUser, Group } = require('../models');
+const { User, Resource, Group } = require('../models');
 
 router.get('/', async (req, res) => {
   res.render('homepage', {
@@ -69,17 +69,5 @@ router.get('/chatroom', async (req, res) => {
   };
 });
 
-// router.get('/chatroom', async (req, res) => {
-//   try {
-//     res.render('chatroom');
-//     // const chatLogs = await Chat.findAll();
-//     // res.status(200).json({chatLogs});
-//   }
-
-//   catch (err) {
-//     res.status(500).json(err);
-//   }
-  
-// });
 
 module.exports = router;

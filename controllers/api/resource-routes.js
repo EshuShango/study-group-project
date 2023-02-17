@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Resource, GroupUser, } = require("../../models");
+const { Resource } = require("../../models");
 
 router.post('/', (req, res) => {
   // create a new resource

@@ -26,6 +26,3 @@ async function login(e) {
 }
 
 loginFormBtn.addEventListener('click', login);
-
-//? do we need two or is this a typo below?
-// loginFormBtn.addEventListener('click', login);
